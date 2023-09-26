@@ -11,14 +11,12 @@ FEATURES:
 The dashboard includes a left panel which shows the number of people connected with software with their respective vitals. 
 The icons of each of these people are colour-theorised to show whether the person is in safe zone or not. 
 
-=> Monitors vital signs of individuals, including:
+&rarr; Monitors vital signs of individuals, including:
 * Heartbeat
 * Oxygen levels (O2)
 * Body temperature
 * Breaths per minute
 
-=>Displays the exact location of each person on a map with a color theory where green is safe zone and red is danger, ensuring their safety. 
-
-=>Provides up-to-date weather forecasts for the region, helping mountaineers and base camp staff make informed decisions.
-
-=>Radio signal frequencies for communication in remote areas, ensuring reliable communication channels.
+&rarr; Displays the exact location of each person on a map with a color theory where green is safe zone and red is danger, ensuring their safety. 
+&rarr; Provides up-to-date weather forecasts for the region, helping mountaineers and base camp staff make informed decisions.
+&rarr; Radio signal frequencies for communication in remote areas, ensuring reliable communication channels.
