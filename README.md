@@ -18,6 +18,7 @@ The icons of each of these people are colour-theorised to show whether the perso
 * Breaths per minute
 
 &rarr; Displays the exact location of each person on a map with a color theory where green is safe zone and red is danger, ensuring their safety. 
+<br/>
 &rarr; Provides up-to-date weather forecasts for the region, helping mountaineers and base camp staff make informed decisions. 
 <br/>
 &rarr; Radio signal frequencies for communication in remote areas, ensuring reliable communication channels.
