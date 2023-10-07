@@ -13,18 +13,25 @@ import {
 
 const Topbar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isNotifDropdownOpen, setNotifDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
+    }
+    const toggleNotifDropdown = () => {
+        setNotifDropdownOpen(!isNotifDropdownOpen);
     }
 
     const closeDropdown = () => {
         setDropdownOpen(false);
     }
+    const closeNotifDropdown = () => {
+        setNotifDropdownOpen(false);
+    }
 
     return (
-        <nav className=" bg-zinc-800 z-10 min-w-max w-screen h-12 relative items-stretch text-center">
-            <div className=" grid grid-cols-11 bg-inherit items-center p-3 text-center">
+        <nav className=" bg-zinc-800 z-10 min-w-max w-screen h-6 relative items-stretch text-center">
+            <div className=" grid grid-cols-11 bg-inherit items-center p-2 text-center">
                 <div className="bg-inherit col-start-1 text-left col-span-2">
                     Logo
                 </div>
@@ -44,12 +51,44 @@ const Topbar = () => {
                     <IconPlus size={24} className="bg-inherit inline-flex pr-1 pb-[4px]"/>Add view
                 </div>
                 <div className="bg-inherit col-start-9 col-span-2 justify-between text-right">
-                    <button><IconBell size={24} className="bg-inherit inline-flex pr-1 pb-[4px]"/></button>
+                    <button onClick={toggleNotifDropdown}
+                        onBlur={closeNotifDropdown}
+                        className="bg-inherit 
+                        rounded-md
+                        focus:outline-none
+                        focus:ring-0"
+                        aria-haspopup="false"
+                        aria-expanded={isNotifDropdownOpen} id="bell">
+                        <IconBell size={28} className="bg-inherit inline-flex pr-2 pb-[4px]" />
+                    </button>
+                    <ul
+                        className={`origin-top-right fixed text-center mt-2 w-2/12 py-4 rounded-md shadow-lg bg-zinc-800 ring-1 ring-black ring-opacity-5 ${
+                        isNotifDropdownOpen ? 'block' : 'hidden'
+                        }`}
+                        role="menu"
+                        aria-orientation="vertical"
+                        aria-labelledby="dropdown-button"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <li className="mt-2 mx-1"><a href="_self" className="bg-zinc-800 text-red-400 block border-2 border-red-400 rounded-md py-2 text-sm hover:bg-gray-600" role="menuitem">Help needed! Someone is in danger</a></li>
+                        <li className="mt-2 mx-1"><a href="_self" className="bg-zinc-800 text-yellow-400 block border-2 border-yellow-400 rounded-md py-2 text-sm hover:bg-gray-600" role="menuitem">An avalanche might be possible</a></li>
+                        <li className="mt-2 mx-1"><a href="_self" className="bg-zinc-800 text-green-400 block border-2 border-green-400 rounded-md py-2 text-sm hover:bg-gray-600" role="menuitem">Everything is back to normal</a></li>
+                        <li className="mt-2 mx-1"><a href="_self" className="bg-zinc-800 block border-2 rounded-md py-2 text-sm hover:bg-gray-600" role="menuitem">Data error</a></li>
+                    </ul>
                     <button><IconSearch size={24} className="bg-inherit inline-flex pb-[4px]"/></button>
                 </div>
                 <div className="bg-inherit col-start-11 justify-between text-center">
-                    <button onClick={toggleDropdown} onBlur={closeDropdown} className="bg-inherit rounded-md focus:outline-none focus:ring active:bg-gray-200" aria-haspopup="false" aria-expanded={isDropdownOpen}>
-                        User <br/><sub className="bg-inherit">sign out</sub>
+                    <button
+                        onClick={toggleDropdown}
+                        onBlur={closeDropdown}
+                        className="bg-inherit 
+                        w-full
+                        rounded-md
+                        focus:outline-none
+                        focus:ring-0"
+                        aria-haspopup="false"
+                        aria-expanded={isDropdownOpen} id="user">
+                        User<br/><sub className="bg-inherit text-sm">sign out</sub>
                     </button>
                     <ul
                         className={`origin-top-right absolute mt-2 w-32 rounded-md shadow-lg bg-zinc-800 ring-1 ring-black ring-opacity-5 ${
