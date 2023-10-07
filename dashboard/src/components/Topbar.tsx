@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import pfpImage from '../assets/pfp.png';
 import {
     IconPlus,
     IconNews,
@@ -32,7 +33,7 @@ const Topbar = () => {
     return (
         <nav className=" bg-zinc-800 z-10 min-w-max w-screen h-6 relative items-stretch text-center">
             <div className=" grid grid-cols-11 bg-inherit items-center p-2 text-center">
-                <div className="bg-inherit col-start-1 text-left col-span-2">
+                <div className="bg-inherit col-start-1 text-left col-span-2 font-['Julius Sans One, font-sans']">
                     Logo
                 </div>
                 <div className="bg-inherit col-start-4">
@@ -62,7 +63,7 @@ const Topbar = () => {
                         <IconBell size={28} className="bg-inherit inline-flex pr-2 pb-[4px]" />
                     </button>
                     <ul
-                        className={`origin-top-right fixed text-center mt-2 w-2/12 py-4 rounded-md shadow-lg bg-zinc-800 ring-1 ring-black ring-opacity-5 ${
+                        className={`origin-top-right fixed text-center mt-2 w-2/12 py-4 rounded-b-md shadow-lg bg-zinc-800 ring-1 ring-black ring-opacity-5 ${
                         isNotifDropdownOpen ? 'block' : 'hidden'
                         }`}
                         role="menu"
@@ -77,7 +78,7 @@ const Topbar = () => {
                     </ul>
                     <button><IconSearch size={24} className="bg-inherit inline-flex pb-[4px]"/></button>
                 </div>
-                <div className="bg-inherit col-start-11 justify-between text-center">
+                <div className="bg-inherit col-start-11 justify-between text-center pl-9">
                     <button
                         onClick={toggleDropdown}
                         onBlur={closeDropdown}
@@ -85,13 +86,17 @@ const Topbar = () => {
                         w-full
                         rounded-md
                         focus:outline-none
-                        focus:ring-0"
+                        focus:ring-0
+                        flex items-center"
                         aria-haspopup="false"
                         aria-expanded={isDropdownOpen} id="user">
-                        User<br/><sub className="bg-inherit text-sm">sign out</sub>
+                        <span className="bg-inherit mr-2 leading-none">User<br /><sub className="bg-inherit text-sm text-blue-400 underline">sign out</sub></span>
+                        <div className="rounded-full overflow-hidden w-12 h-12">
+                            <img src={ pfpImage } className=" w-full h-full object-cover" alt="user pfp"/>
+                        </div>
                     </button>
                     <ul
-                        className={`origin-top-right absolute mt-2 w-32 rounded-md shadow-lg bg-zinc-800 ring-1 ring-black ring-opacity-5 ${
+                        className={`origin-top-right absolute rounded-b-xl mt-2 w-32 shadow-lg bg-zinc-800 ring-1 ring-black ring-opacity-5 ${
                         isDropdownOpen ? 'block' : 'hidden'
                         }`}
                         role="menu"
@@ -101,7 +106,7 @@ const Topbar = () => {
                     >
                         <li><a href="_self" className="bg-zinc-800 block px-4 py-2 text-sm hover:bg-gray-600" role="menuitem">Settings</a></li>
                         <li><a href="_self" className="bg-zinc-800 block px-4 py-2 text-sm hover:bg-gray-600" role="menuitem">Sign out</a></li>
-                        <li><a href="_self" className="bg-zinc-800 block px-4 py-2 text-sm hover:bg-gray-600" role="menuitem">Help</a></li>
+                        <li><a href="_self" className="bg-zinc-800 block rounded-b-md px-4 py-2 text-sm hover:bg-gray-600" role="menuitem">Help</a></li>
                     </ul>
                 </div>
             </div>
