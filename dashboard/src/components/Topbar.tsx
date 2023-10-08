@@ -78,7 +78,7 @@ const Topbar = () => {
                     </ul>
                     <button><IconSearch size={24} className="bg-inherit inline-flex pb-[4px]"/></button>
                 </div>
-                <div className="bg-inherit col-start-11 justify-between text-center pl-9">
+                <div className="bg-inherit col-start-11 justify-between text-center pl-3">
                     <button
                         onClick={toggleDropdown}
                         onBlur={closeDropdown}
