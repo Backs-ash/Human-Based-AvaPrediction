@@ -10,6 +10,10 @@ const Sidebar: React.FC = () => {
     const profileData = [
         { name: 'User 1', bio1: '69bpm', bio2: '11b/m', bio3: '36.9C', bio4: '96%'},
         { name: 'User 2', bio1: '69bpm', bio2: '11b/m', bio3: '36.9C', bio4: '96%'},
+        { name: 'User 3', bio1: '69bpm', bio2: '11b/m', bio3: '36.9C', bio4: '96%'},
+        { name: 'User 4', bio1: '69bpm', bio2: '11b/m', bio3: '36.9C', bio4: '96%'},
+        { name: 'User 5', bio1: '69bpm', bio2: '11b/m', bio3: '36.9C', bio4: '96%'},
+        { name: 'User 6', bio1: '69bpm', bio2: '11b/m', bio3: '36.9C', bio4: '96%'},
     ];
 
     return (
