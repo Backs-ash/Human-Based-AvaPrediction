@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
     return (
         <div className="flex">
             {/* Scrollable profile container */}
-            <div className="container z-[2] mt-12 w-1/4 p-2 overflow-y-scroll">
+            <div className="container z-[2] mt-12 w-1/4 h-2/3 p-2 overflow-y-scroll">
                 {profileData.map((profile, index) => (
                 <div key={index} className="bg-zinc-700 rounded-lg shadow-lg h-1/3 p-2 mb-4">
                     <button className="grid grid-cols-2 p-0 h-full w-full bg-inherit">

@@ -4,6 +4,7 @@ import Topbar from './components/Topbar';
 import MainBody from './components/MainBody';
 import Bottombar from './components/Bottombar';
 import Sidebar from './components/sidebar';
+import LeafletMap from './components/LeafletMap';
 
 function App() {
   return (
@@ -11,12 +12,12 @@ function App() {
       <body>
         <div className="">
           <Topbar/>
-        </div>
+        </div>        
         <div>
           <Sidebar />
         </div>
-        <div>
-          <MainBody />
+        <div className='h-25%'>
+          <LeafletMap />
         </div>
         <div>
           <Bottombar />
