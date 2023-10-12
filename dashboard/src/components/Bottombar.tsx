@@ -28,7 +28,7 @@ const Bottombar = () => {
                 -4º
             </div>
             <div className=" bg-inherit text-fuchsia-700 col-start-3 row-start-4 items-center px-2">
-                -13º
+                0º
             </div>
             <div className="bg-inherit col-start-4 px-2 text-teal-500">
                 WED
@@ -37,10 +37,10 @@ const Bottombar = () => {
                 <IconSnowflake className="bg-inherit"/>
             </div>
             <div className=" bg-inherit text-fuchsia-700 col-start-4 row-start-3 items-center px-2">
-                -4º
+                -14º
             </div>
             <div className=" bg-inherit text-fuchsia-700 col-start-4 row-start-4 items-center px-2">
-                -13º
+                -3º
             </div>
             <div className="bg-inherit col-start-5 px-2 text-teal-500">
                 THU
@@ -100,7 +100,7 @@ const Bottombar = () => {
     );
 
     return (
-        <div className="bg-inherit ml-[22rem]">
+        <div className="bg-inherit ml-[29rem]">
             <div className="w-1/4 p-4 flex flex-row">
                 {/* Box 1 */}
                 {box1Content}

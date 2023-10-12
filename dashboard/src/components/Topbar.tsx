@@ -33,7 +33,7 @@ const Topbar = () => {
     return (
         <nav className=" bg-zinc-800 z-10 min-w-max w-screen h-6 relative items-stretch text-center">
             <div className=" grid grid-cols-11 bg-inherit items-center p-2 text-center">
-                <div className="bg-inherit col-start-1 text-left col-span-2 font-['Julius Sans One, font-sans']">
+                <div className="bg-inherit col-start-1 text-left col-span-3 font-['Julius Sans One, font-sans']">
                     Logo
                 </div>
                 <div className="bg-inherit col-start-4">
@@ -78,7 +78,7 @@ const Topbar = () => {
                     </ul>
                     <button><IconSearch size={24} className="bg-inherit inline-flex pb-[4px]"/></button>
                 </div>
-                <div className="bg-inherit col-start-11 justify-between text-center pl-3">
+                <div className="bg-inherit col-start-11 text-right pl-4">
                     <button
                         onClick={toggleDropdown}
                         onBlur={closeDropdown}
@@ -87,7 +87,7 @@ const Topbar = () => {
                         rounded-md
                         focus:outline-none
                         focus:ring-0
-                        flex items-center"
+                        flex text-right"
                         aria-haspopup="false"
                         aria-expanded={isDropdownOpen} id="user">
                         <span className="bg-inherit mr-2 leading-none">User<br /><sub className="bg-inherit text-sm text-blue-400 underline">sign out</sub></span>
