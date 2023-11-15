@@ -31,7 +31,7 @@ const Topbar = () => {
     }
 
     return (
-        <nav className=" bg-zinc-800 z-10 min-w-max w-screen h-6 relative items-stretch text-center">
+        <nav className="bg-zinc-800 min-w-max z-10 w-screen h-6 relative items-stretch text-center">
             <div className=" grid grid-cols-11 bg-inherit items-center p-2 text-center">
                 <div className="bg-inherit col-start-1 text-left col-span-3 font-['Julius Sans One, font-sans']">
                     Logo

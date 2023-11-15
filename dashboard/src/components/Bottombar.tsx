@@ -3,7 +3,7 @@ import { IconSnowflake, IconCloudSnow } from "@tabler/icons-react";
 
 const Bottombar = () => {
     const box1Content = (
-        <div className=" absolute z-0 bg-zinc-800 shadow-lg rounded-md mx-2 p-4 grid grid-cols-8 grid-rows-4 text-center text-lg">
+        <div className="˜ z-0 bg-zinc-800 shadow-lg rounded-md mx-2 p-4 grid grid-cols-8 grid-rows-4 text-center text-lg">
             <div className="py-1 bg-inherit text-left col-start-1 row-start-3 text-green-400 text-sm">L:</div>
             <div className="py-1 bg-inherit text-left col-start-1 row-start-4 text-green-400 text-sm">H:</div>
             <div className="bg-inherit col-start-2 row-start-1 px-2 text-teal-500">
@@ -100,7 +100,7 @@ const Bottombar = () => {
     );
 
     return (
-        <div className="bg-inherit ml-[29rem]">
+        <div className="bg-inherit w-screen flex-auto">
             <div className="w-1/4 p-4 flex flex-row">
                 {/* Box 1 */}
                 {box1Content}
