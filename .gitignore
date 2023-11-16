@@ -1,1 +1,3 @@
-node_modules/**
+
+#Pseudo Dependency folders to be ignored
+/node_modules
