@@ -100,7 +100,7 @@ const Bottombar = () => {
     );
 
     return (
-        <div className="bg-inherit w-screen flex-auto">
+        <div className="bg-inherit w-full flex-auto">
             <div className="w-1/4 p-4 flex flex-row">
                 {/* Box 1 */}
                 {box1Content}

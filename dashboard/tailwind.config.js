@@ -6,7 +6,6 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateRows: {
-        '2': 'repeat(2, minmax(1, 1fr)) auto',
         '3': 'repeat(3, minmax(1, 1fr)) auto',
         '11': 'repeat(11, minmax(1, 1fr)) auto',
       }, 
